@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afb92ffeff6bc149a04886ef1b38762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyShip: {fileID: 1713906617921558, guid: 4402bf0f4fc28084f9201dec0d766052, type: 2}
+  EnemyShip: {fileID: 1455737009516414, guid: 4402bf0f4fc28084f9201dec0d766052, type: 2}
   shipsCount: 3
 --- !u!4 &102616579
 Transform:

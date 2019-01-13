@@ -17,6 +17,14 @@ public class EnemyShipSpawner : MonoBehaviour {
 
     public static EnemyShipSpawner Instance { get; set; }
 
+    void Awake() {
+        Instance = this;
+    }
+
+    void OnDestroy() {
+        //Instance = null;
+    }
+
     public void RegisterPlayer(GameObject obj) {
         PlayerShip = obj;
     }
@@ -31,7 +39,14 @@ public class EnemyShipSpawner : MonoBehaviour {
 
     void SpawnShips() {
         for (int i = 0; i < shipsCount; i++) {
-            var positionToSpawn = new Vector3(Random.Range(0, 1), 5, Random.Range(0, 1));
+
+            var positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
+
+            while (positionToSpawn != PlayerShip.transform.position) {
+                positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
+            }
+
+            positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
 
             Instantiate(EnemyShip, positionToSpawn, new Quaternion());
         }
@@ -39,7 +54,7 @@ public class EnemyShipSpawner : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (!spawningFinished) {
+        if (!spawningFinished && PlayerShip != null) {
             SpawnShips();
 
             spawningFinished = true;

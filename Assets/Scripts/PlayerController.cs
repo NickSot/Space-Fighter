@@ -19,8 +19,10 @@ public class PlayerController : MonoBehaviour
     {
         LoadSaveController.Save(SceneManager.GetActiveScene().name);
 
-        if (AsteroidSpawner.Instance != null)
+        if (AsteroidSpawner.Instance != null && SceneManager.GetActiveScene().name == "Level1")
             AsteroidSpawner.Instance.RegisterPlayer(gameObject);
+        else if (EnemyShipSpawner.Instance != null && SceneManager.GetActiveScene().name == "Level2")
+            EnemyShipSpawner.Instance.RegisterPlayer(gameObject);
     }
 
     void OnDestroy()
@@ -28,6 +30,10 @@ public class PlayerController : MonoBehaviour
         if (AsteroidSpawner.Instance != null)
         {
             AsteroidSpawner.Instance.UnregisterPlayer(gameObject);
+        }
+
+        if (EnemyShipSpawner.Instance != null) {
+            EnemyShipSpawner.Instance.UnregisterPlayer();
         }
     }
 
