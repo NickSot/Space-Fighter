@@ -93,6 +93,11 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision col) {
+        if (col.gameObject.CompareTag("EnemyShip")) {
+            Debug.Log("HERE");
+            hp -= 10;
+        }
+
         if (col.gameObject.name == "prop_asteroid_01(Clone)" || col.gameObject.name == "prop_asteroid_03(Clone)") {
             hp -= 10;
         }

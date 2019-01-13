@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E : MonoBehaviour {
+public class EnemyShipMovementController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float hp = 50;
+    public GameObject explosion;
+
+    // Use this for initialization
+    void Start() {
+
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (hp <= 0)
+        {
+            Instantiate(explosion, transform.position, new Quaternion());
+            Destroy(gameObject);
+        }
+    }
 }
