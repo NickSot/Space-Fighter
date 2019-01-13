@@ -42,8 +42,13 @@ public class EnemyShipSpawner : MonoBehaviour {
 
             var positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
 
+            positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
+
             while (positionToSpawn != PlayerShip.transform.position) {
+
                 positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
+
+                positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
             }
 
             positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);

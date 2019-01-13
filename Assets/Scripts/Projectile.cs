@@ -18,7 +18,14 @@ public class Projectile : MonoBehaviour {
         Destroy(gameObject);
         if (col.gameObject.name != "TUES_PlayerShip")
         {
-            col.gameObject.GetComponent<EnemyShipMovementController>().hp -= damage;
+            if (col.gameObject.CompareTag("Enemy"))
+            {
+                col.gameObject.GetComponent<AsteroidMovementController>().hp -= damage;
+            }
+
+            if (col.gameObject.CompareTag("EnemyShip")) {
+                col.gameObject.GetComponent<EnemyShipMovementController>().hp -= damage;
+            }
         }
     }
 }
