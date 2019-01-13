@@ -7,7 +7,7 @@ public class IntroController : MonoBehaviour {
 
     public GameObject canvas;
     public uint size = 270;
-    public string sceneToLoad = "Level1";
+    public int sceneToLoad = 1;
     Transform text = null;
 	// Use this for initialization
 	void Start () {

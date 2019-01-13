@@ -566,7 +566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1175849737}
   size: 270
-  sceneToLoad: Level2
+  sceneToLoad: 4
 --- !u!1 &1475401821
 GameObject:
   m_ObjectHideFlags: 0

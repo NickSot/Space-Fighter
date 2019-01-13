@@ -11,18 +11,20 @@ public class EnemyShipSpawner : MonoBehaviour {
 
     public GameObject EnemyShip;
     GameObject PlayerShip;
-    PlayableGridCell[,] PlayableAreaGrid = null;
     bool spawningFinished = false;
     public uint shipsCount = 5;
 
     public static EnemyShipSpawner Instance { get; set; }
 
     void Awake() {
-        Instance = this;
-    }
-
-    void OnDestroy() {
-        //Instance = null;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void RegisterPlayer(GameObject obj) {
@@ -31,10 +33,6 @@ public class EnemyShipSpawner : MonoBehaviour {
 
     public void UnregisterPlayer() {
         PlayerShip = null;
-    }
-
-    void DeterminePlayableGrid() {
-
     }
 
     void SpawnShips() {

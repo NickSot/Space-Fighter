@@ -281,7 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1319681562}
   size: 270
-  sceneToLoad: 
+  sceneToLoad: 1
 --- !u!82 &717828472
 AudioSource:
   m_ObjectHideFlags: 0
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1319681562}
   size: 270
-  sceneToLoad: Level1
+  sceneToLoad: 1
 --- !u!1 &1488331959
 GameObject:
   m_ObjectHideFlags: 0
