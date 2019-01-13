@@ -320,6 +320,11 @@ Prefab:
       propertyPath: m_AngularDrag
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 114615182476259296, guid: cea4ab7f29d3f6d4faead5e88027da83,
+        type: 2}
+      propertyPath: enemyCount
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cea4ab7f29d3f6d4faead5e88027da83, type: 2}
   m_IsPrefabAsset: 0
@@ -363,7 +368,7 @@ MonoBehaviour:
   hp: 100
   explosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
   enemies: []
-  enemyCount: 5
+  enemyCount: 3
   printMessage: 0
   victory: 0
 --- !u!54 &1210822589

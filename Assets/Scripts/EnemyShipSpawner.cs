@@ -51,7 +51,9 @@ public class EnemyShipSpawner : MonoBehaviour {
 
             positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
 
-            Instantiate(EnemyShip, positionToSpawn, new Quaternion());
+            var es = Instantiate(EnemyShip, positionToSpawn, new Quaternion());
+
+            es.GetComponent<EnemyShipMovementController>().RegisterPlayer(PlayerShip);
         }
     }
 
