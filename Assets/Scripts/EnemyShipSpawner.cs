@@ -1,14 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class EnemyShipSpawner : MonoBehaviour {
-    protected class PlayableGridCell
-    {
-        public Bounds cellBounds;
-        public bool isOccupied;
-    };
-
     public GameObject EnemyShip;
     GameObject PlayerShip;
     bool spawningFinished = false;
@@ -37,19 +32,15 @@ public class EnemyShipSpawner : MonoBehaviour {
 
     void SpawnShips() {
         for (int i = 0; i < shipsCount; i++) {
-
             var positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
 
             positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
 
-            while (positionToSpawn != PlayerShip.transform.position) {
-
+            while (positionToSpawn == PlayerShip.transform.position) {
                 positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
 
                 positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
             }
-
-            positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
 
             var es = Instantiate(EnemyShip, positionToSpawn, new Quaternion());
 
@@ -60,6 +51,13 @@ public class EnemyShipSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!spawningFinished && PlayerShip != null) {
+            /*StreamWriter sw = new StreamWriter("file.txt");
+
+            sw.WriteLine("Entered the IF!");
+
+            sw.Close();
+            */
+
             SpawnShips();
 
             spawningFinished = true;
