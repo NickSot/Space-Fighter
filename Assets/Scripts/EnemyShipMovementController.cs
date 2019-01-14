@@ -28,9 +28,13 @@ public class EnemyShipMovementController : MonoBehaviour {
 
         var rb = GetComponent<Rigidbody>();
 
-        rb.velocity = direction3d * 0.6f;
-        
-        //rb.angularVelocity = Random.onUnitSphere * AsteroidAngularSpeed;
+        rb.velocity = direction3d;
+
+        var playerPos = player.transform.position;
+
+        transform.LookAt(player.transform);
+
+        gameObject.GetComponent<Weapon>().Shoot();
 
         if (hp <= 0)
         {

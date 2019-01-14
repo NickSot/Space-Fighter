@@ -15,17 +15,20 @@ public class Projectile : MonoBehaviour {
 	}
 
     void OnCollisionEnter(Collision col) {
-        Destroy(gameObject);
-        if (col.gameObject.name != "TUES_PlayerShip")
+        if (col.gameObject.CompareTag("Enemy"))
         {
-            if (col.gameObject.CompareTag("Enemy"))
-            {
-                col.gameObject.GetComponent<AsteroidMovementController>().hp -= damage;
-            }
-
-            if (col.gameObject.CompareTag("EnemyShip")) {
-                col.gameObject.GetComponent<EnemyShipMovementController>().hp -= damage;
-            }
+            col.gameObject.GetComponent<AsteroidMovementController>().hp -= damage;
         }
+        else if (col.gameObject.CompareTag("EnemyShip") && !gameObject.CompareTag("EnemyProjectile"))
+        {
+            col.gameObject.GetComponent<EnemyShipMovementController>().hp -= damage;
+        }
+        else if (col.gameObject.CompareTag("Player") && gameObject.CompareTag("EnemyProjectile"))
+        {
+            col.gameObject.GetComponent<PlayerController>().hp -= damage;
+        }
+        
+
+        Destroy(gameObject);
     }
 }

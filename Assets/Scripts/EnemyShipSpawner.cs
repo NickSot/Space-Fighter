@@ -32,15 +32,16 @@ public class EnemyShipSpawner : MonoBehaviour {
 
     void SpawnShips() {
         for (int i = 0; i < shipsCount; i++) {
-            var positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
+            var positionToSpawn = new Vector3();
 
-            positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
-
-            while (positionToSpawn == PlayerShip.transform.position) {
-                positionToSpawn = Camera.main.WorldToViewportPoint(new Vector3(Random.Range(0, 1), 5));
+            while (positionToSpawn.x < PlayerShip.transform.position.x + 1 && positionToSpawn.x > PlayerShip.transform.position.x - 1)
+            {
+                positionToSpawn.x = Random.Range(0, 1);
 
                 positionToSpawn = Camera.main.ViewportToWorldPoint(positionToSpawn);
             }
+
+            positionToSpawn.y = 5;
 
             var es = Instantiate(EnemyShip, positionToSpawn, new Quaternion());
 
