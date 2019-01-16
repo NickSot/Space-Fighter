@@ -21,7 +21,6 @@ public class EnemyShipMovementController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
         var playerPos = player.transform.position;
 
         transform.LookAt(player.transform);
@@ -37,7 +36,6 @@ public class EnemyShipMovementController : MonoBehaviour {
 
         if (transform.position.z > playerPos.z)
         {
-            Debug.Log("NIGGA");
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - Time.deltaTime);
         }
         if (transform.position.z < playerPos.z)

@@ -29,9 +29,8 @@ public class Projectile : MonoBehaviour {
         }
         else if (col.gameObject.CompareTag("EnemyBomber") && !gameObject.CompareTag("EnemyProjectile"))
         {
-            col.gameObject.GetComponent<EnemyShipMovementController>().hp -= damage;
+            col.gameObject.GetComponent<EnemyBomberMovementController>().hp -= damage;
         }
-
 
         Destroy(gameObject);
     }

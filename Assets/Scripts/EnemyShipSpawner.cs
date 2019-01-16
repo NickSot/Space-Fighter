@@ -47,7 +47,10 @@ public class EnemyShipSpawner : MonoBehaviour {
 
             var es = Instantiate(obj, positionToSpawn, new Quaternion());
 
-            es.GetComponent<EnemyShipMovementController>().RegisterPlayer(PlayerShip);
+            if (obj.CompareTag("EnemyShip"))
+                es.GetComponent<EnemyShipMovementController>().RegisterPlayer(PlayerShip);
+            else
+                es.GetComponent<EnemyBomberMovementController>().RegisterPlayer(PlayerShip);
 
             PlayerShip.GetComponent<PlayerController>().enemies.Add(es);
         }
@@ -59,6 +62,9 @@ public class EnemyShipSpawner : MonoBehaviour {
             if (killedCount == 0)
             {
                 SpawnShips(EnemyShip);
+            }
+            else {
+                SpawnShips(EnemyBomber);
             }
 
             spawningFinished = true;

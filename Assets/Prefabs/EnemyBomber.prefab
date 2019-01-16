@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 114918952238799360}
   - component: {fileID: 54483852164083460}
   - component: {fileID: 136459160947406984}
+  - component: {fileID: 114438844943558028}
   m_Layer: 0
   m_Name: EnemyBomber
-  m_TagString: EnemyShip
+  m_TagString: EnemyBomber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1153,6 +1154,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &114438844943558028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1015995403703660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117eb69c1a4bbd147965eda23d3230c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
+  hp: 12
 --- !u!114 &114918952238799360
 MonoBehaviour:
   m_ObjectHideFlags: 1
