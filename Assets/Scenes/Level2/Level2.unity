@@ -141,6 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyShip: {fileID: 1934724976875254, guid: b1d526eb5f53ad649a7ee482ce176233, type: 2}
+  EnemyBomber: {fileID: 1015995403703660, guid: ed26e866caad9b146a4fe018ba5d89b1,
+    type: 2}
   shipsCount: 3
 --- !u!4 &102616579
 Transform:
@@ -165,6 +167,7 @@ GameObject:
   - component: {fileID: 777131939}
   - component: {fileID: 777131938}
   - component: {fileID: 777131937}
+  - component: {fileID: 777131940}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -232,6 +235,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &777131940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777131936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737ea25c19a086c4f9647a9978b83473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetFrameRate: 60
+  player: {fileID: 1900905365}
 --- !u!1 &1148877860
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +283,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.83777094
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -498,6 +514,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1900905365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1686432786995286, guid: cea4ab7f29d3f6d4faead5e88027da83,
+    type: 2}
+  m_PrefabInternal: {fileID: 1210822586}
 --- !u!1 &1909579141
 GameObject:
   m_ObjectHideFlags: 0

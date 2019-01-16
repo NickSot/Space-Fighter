@@ -34,8 +34,6 @@ public class ScenarioController : MonoBehaviour {
                 style.fontSize = h * 2 / 40;
                 style.normal.textColor = new Color(1, 1, 1, 1f);
 
-                //string hpText = "Nice! Now we've got a... Ah, shit!, there's more incoming!";
-
                 GUI.Label(rect, messageToPrint, style);
             }
             catch (Exception ex)

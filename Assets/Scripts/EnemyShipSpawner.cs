@@ -5,9 +5,11 @@ using System.IO;
 
 public class EnemyShipSpawner : MonoBehaviour {
     public GameObject EnemyShip;
+    public GameObject EnemyBomber;
     GameObject PlayerShip;
     bool spawningFinished = false;
     public uint shipsCount = 5;
+    int killedCount = 0;
 
     public static EnemyShipSpawner Instance { get; set; }
 
@@ -30,9 +32,9 @@ public class EnemyShipSpawner : MonoBehaviour {
         PlayerShip = null;
     }
 
-    void SpawnShips() {
+    void SpawnShips(GameObject obj) {
         for (int i = 0; i < shipsCount; i++) {
-            var positionToSpawn = new Vector3();
+            var positionToSpawn = new Vector3(0, 0, 0);
 
             while (positionToSpawn.x < PlayerShip.transform.position.x + 1 && positionToSpawn.x > PlayerShip.transform.position.x - 1)
             {
@@ -43,25 +45,33 @@ public class EnemyShipSpawner : MonoBehaviour {
 
             positionToSpawn.y = 5;
 
-            var es = Instantiate(EnemyShip, positionToSpawn, new Quaternion());
+            var es = Instantiate(obj, positionToSpawn, new Quaternion());
 
             es.GetComponent<EnemyShipMovementController>().RegisterPlayer(PlayerShip);
+
+            PlayerShip.GetComponent<PlayerController>().enemies.Add(es);
         }
     }
 
 	// Update is called once per frame
 	void Update () {
         if (!spawningFinished && PlayerShip != null) {
-            /*StreamWriter sw = new StreamWriter("file.txt");
-
-            sw.WriteLine("Entered the IF!");
-
-            sw.Close();
-            */
-
-            SpawnShips();
+            if (killedCount == 0)
+            {
+                SpawnShips(EnemyShip);
+            }
 
             spawningFinished = true;
+        }
+
+        if (killedCount == 2) {
+            PlayerShip.GetComponent<PlayerController>().victory = true;
+        }
+
+        if (PlayerShip.GetComponent<PlayerController>().enemies.Count == 0) {
+            killedCount++;
+
+            spawningFinished = false;
         }
 	}
 }

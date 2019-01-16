@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: cff6ed4e49261514b9da56e0a0a1d53c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Air_Bust
+    100002: Air_Bust_001
+    100004: Air_Bust_002
+    100006: Air_Bust_003
+    100008: Door
+    100010: Door001
+    100012: Door_Suppor_001
+    100014: Door_Support
+    100016: fuel_tank_Left
+    100018: fuel_tank_Right
+    100020: Panel
+    100022: ship_body
+    100024: ship_cabin
+    100026: ship_Sit
+    100028: solar_cells
+    100030: Solar_cells_Capacitator
+    100032: //RootNode
+    400000: Air_Bust
+    400002: Air_Bust_001
+    400004: Air_Bust_002
+    400006: Air_Bust_003
+    400008: Door
+    400010: Door001
+    400012: Door_Suppor_001
+    400014: Door_Support
+    400016: fuel_tank_Left
+    400018: fuel_tank_Right
+    400020: Panel
+    400022: ship_body
+    400024: ship_cabin
+    400026: ship_Sit
+    400028: solar_cells
+    400030: Solar_cells_Capacitator
+    400032: //RootNode
+    2100000: Buster_mat__Cargo_Ship_Air_Buster_TEXT_png
+    2100002: Material_004__Ship_Sit_Text_png
+    2100004: Panel__Cargo_Ship_Panel_Text_png
+    2100006: door_bind_001
+    2100008: door_bind
+    2100010: door000__Cargo_Ship_dOOR_TEXT_png
+    2100012: Door001__Cargo_Ship_dOOR_TEXT_001_png
+    2100014: Cabin_Glass__Cargo_Ship_CAbin_TEXT_png
+    2100016: All_Cabin__Cargo_Ship_CAbin_TEXT_png
+    2100018: Cargo_Ship_Battery__Cargo_Ship_Batterys_TEXT_png
+    2100020: cargo_ship_fuel_tank_Right__Cargo_Ship_TubeText001_png_001
+    2100022: cargo_ship_fuel_tank_Left__Cargo_Ship_TubeText_png_001
+    2100024: turbo_foguete__Ship_Energy_Cont_Text_png
+    2100026: Cargo_Ship_Body__Cargo_Ship_Text_png_001
+    2300000: Air_Bust
+    2300002: Air_Bust_001
+    2300004: Air_Bust_002
+    2300006: Air_Bust_003
+    2300008: Door
+    2300010: Door001
+    2300012: Door_Suppor_001
+    2300014: Door_Support
+    2300016: fuel_tank_Left
+    2300018: fuel_tank_Right
+    2300020: Panel
+    2300022: ship_body
+    2300024: ship_cabin
+    2300026: ship_Sit
+    2300028: solar_cells
+    2300030: Solar_cells_Capacitator
+    3300000: Air_Bust
+    3300002: Air_Bust_001
+    3300004: Air_Bust_002
+    3300006: Air_Bust_003
+    3300008: Door
+    3300010: Door001
+    3300012: Door_Suppor_001
+    3300014: Door_Support
+    3300016: fuel_tank_Left
+    3300018: fuel_tank_Right
+    3300020: Panel
+    3300022: ship_body
+    3300024: ship_cabin
+    3300026: ship_Sit
+    3300028: solar_cells
+    3300030: Solar_cells_Capacitator
+    4300000: Air_Bust_003
+    4300002: Air_Bust_002
+    4300004: Air_Bust_001
+    4300006: ship_Sit
+    4300008: Panel
+    4300010: Door_Suppor_001
+    4300012: Door_Support
+    4300014: Door
+    4300016: Door001
+    4300018: Air_Bust
+    4300020: ship_cabin
+    4300022: solar_cells
+    4300024: fuel_tank_Left
+    4300026: fuel_tank_Right
+    4300028: Solar_cells_Capacitator
+    4300030: ship_body
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
