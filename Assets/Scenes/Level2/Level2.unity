@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyShip: {fileID: 1934724976875254, guid: b1d526eb5f53ad649a7ee482ce176233, type: 2}
-  EnemyBomber: {fileID: 1015995403703660, guid: ed26e866caad9b146a4fe018ba5d89b1,
+  EnemyBomber: {fileID: 1556984604088324, guid: ac80076e3fb56f14e9b930c3372ba1ff,
     type: 2}
   shipsCount: 3
 --- !u!4 &102616579

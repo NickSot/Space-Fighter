@@ -49,7 +49,7 @@ public class EnemyShipSpawner : MonoBehaviour {
 
             if (obj.CompareTag("EnemyShip"))
                 es.GetComponent<EnemyShipMovementController>().RegisterPlayer(PlayerShip);
-            else
+            else if (obj.CompareTag("EnemyBomber"))
                 es.GetComponent<EnemyBomberMovementController>().RegisterPlayer(PlayerShip);
 
             PlayerShip.GetComponent<PlayerController>().enemies.Add(es);
